@@ -1,9 +1,9 @@
-package com.notes.entities;
+package com.notes.dtos;
+
 
 
 import java.util.Date;
 
-import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,12 +11,16 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@MappedSuperclass
-public class BaseModel {
+public class CategoryDto {
+	
+	private Integer id;
+	private String name;
+	private String description;
 	private Boolean isActive;
-	private Boolean isDeleted;
 	private Integer createdBy;
 	private Date createdOn;
 	private Integer updatedBy;
-	private Date updateOn;
+	private Date updatedOn;
+	
+
 }

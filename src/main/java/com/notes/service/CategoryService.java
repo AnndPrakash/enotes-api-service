@@ -2,11 +2,14 @@ package com.notes.service;
 
 import java.util.List;
 
-import com.notes.entities.Category;
+import com.notes.dtos.CategoryDto;
+import com.notes.dtos.response.CategoryResponse;
 
 public interface CategoryService {
-	public Boolean saveCategory(Category category);
+	public Boolean saveCategory(CategoryDto category);
 	
-	public List<Category>getAllCategory();
+	public List<CategoryDto>getAllCategory();
+
+	public List<CategoryResponse> getActiveCategory();
 
 }
